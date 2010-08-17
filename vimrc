@@ -1,4 +1,4 @@
-" this file is created by nemo
+" this file is created by ivaylo
 
 set nocompatible
 
