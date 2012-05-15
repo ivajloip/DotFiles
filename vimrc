@@ -1,46 +1,65 @@
-" this file is created by ivaylo
-
+" general settings
 set nocompatible
-
 set incsearch
 set ignorecase
 set autoindent
-set tabstop=4
-set sw=4
+set tabstop=2
+set sw=2
 set expandtab
 set shiftround
 set showmatch
 set cindent
 set nu!
+filetype plugin on
 syntax on
 colorscheme evening
 
+" Command complete with tab
+set wildmode=longest:full
+set wildmenu
+
 " Select all.
-"map! <c-a> ggVG
+nmap <C-a> ggVG
+imap <C-a> <Esc>ggVG<CR>
+vmap <C-a> <Esc>ggVG<CR>
 
-map! <C-s> <Esc>:w<CR>
-map <C-s> :w<CR>
+" Write file
+imap <F2> <Esc><F2>
+nmap <F2> :w<CR>
 
-vmap <C-c> "+yy
-nmap <C-c> "+yy
-nmap <C-v> "+p
+" Shift source
+vmap <Tab> :s/\(.*\)/  \1/<CR>
+vmap <S-Tab> :s/  \(.*\)/\1/<CR>
 
-"map <C-v> <Esc>:p<CR>
-"map! <C-v> <Esc>:p<CR>
+" Move line up or down with alt+k, alt+j
+set <F13>=j
+set <F14>=k
+nnoremap <F13> :m+<CR>==
+nnoremap <F14> :m-2<CR>==
+inoremap <F13> :m+<CR>==gi
+inoremap <F14> <Esc>:m-2<CR>==gi
+vnoremap <F13> :m'>+<CR>gv=gv
+vnoremap <F14> :m-2<CR>gv=gv
 
-map! <C-space> <C-p>
-map! <F9> :!python3.0 %<CR>
+" Move lines in gvim
+nmap <A-j> <F13>
+nmap <A-k> <F14>
+imap <A-j> <F13>
+imap <A-k> <F14>
+vmap <A-j> <F13>
+vmap <A-k> <F14>
 
-" Java specific stuff
-let java_highlight_all=1
-let java_highlight_debug=1
+" other setings
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp1251
+set tags=./tags,tags
 
-let java_ignore_javadoc=1
-let java_highlight_functions=1
-let java_mark_braces_in_parens_as_errors=1
-
-" highlight strings inside C comments
-let c_comment_strings=1
+function ToggleComment(str1, str2, comment)
+    if strlen(a:str1) > 0
+        return a:str1
+    else
+        return a:comment . a:str2
+    endif
+endfunction
 
 " end of file
-
