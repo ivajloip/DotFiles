@@ -18,36 +18,9 @@ colorscheme evening
 set wildmode=longest:full
 set wildmenu
 
-" Select all.
-nmap <C-a> ggVG
-imap <C-a> <Esc>ggVG<CR>
-vmap <C-a> <Esc>ggVG<CR>
-
 " Write file
 imap <F2> <Esc><F2>
 nmap <F2> :w<CR>
-
-" Shift source
-vmap <Tab> :s/\(.*\)/  \1/<CR>
-vmap <S-Tab> :s/  \(.*\)/\1/<CR>
-
-" Move line up or down with alt+k, alt+j
-set <F13>=j
-set <F14>=k
-nnoremap <F13> :m+<CR>==
-nnoremap <F14> :m-2<CR>==
-inoremap <F13> :m+<CR>==gi
-inoremap <F14> <Esc>:m-2<CR>==gi
-vnoremap <F13> :m'>+<CR>gv=gv
-vnoremap <F14> :m-2<CR>gv=gv
-
-" Move lines in gvim
-nmap <A-j> <F13>
-nmap <A-k> <F14>
-imap <A-j> <F13>
-imap <A-k> <F14>
-vmap <A-j> <F13>
-vmap <A-k> <F14>
 
 " other setings
 set encoding=utf-8
