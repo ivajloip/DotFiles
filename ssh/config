@@ -1,0 +1,5 @@
+Host some_host
+  IdentityFile ~/.ssh/id_rsa
+  User ipetrov
+  Port 5022
+  ForwardX11 yes

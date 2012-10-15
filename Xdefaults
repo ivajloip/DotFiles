@@ -1,0 +1,32 @@
+! Stolen zenburn theme from here: https://gist.github.com/564084
+urxvt*background:  #3f3f3f
+urxvt*foreground:  #dcdccc
+urxvt*fading:      40
+urxvt*fadeColor:   #020202
+urxvt*cursorColor: #dcdccc
+
+urxvt*color0:  #3f3f3f
+urxvt*color1:  #705050
+urxvt*color2:  #60b48a
+urxvt*color3:  #dfaf8f
+urxvt*color4:  #506070
+urxvt*color5:  #dc8cc3
+urxvt*color6:  #8cd0d3
+urxvt*color7:  #dcdccc
+
+urxvt*color8:  #708090
+urxvt*color9:  #cc9393
+urxvt*color10: #7f9f7f
+urxvt*color11: #f0dfaf
+urxvt*color12: #94bff3
+urxvt*color13: #ec93d3
+urxvt*color14: #93e0e3
+urxvt*color15: #ffffff
+
+urxvt*scrollBar: false
+
+!! urxvt font configuration:
+urxvt*boldColors: on
+urxvt*font:       xft:liberation mono:pixelsize=15:antialias=true:hinting=true:medium
+urxvt*boldFont:   xft:liberation mono:pixelsize=15:antialias=true:hinting=true:bold
+

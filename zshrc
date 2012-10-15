@@ -24,9 +24,3 @@ export RPROMPT="%F{blue}%B%~%b%f (%F{green}%B%n%b%f@%F{green}%B%m%b%f)"
 zstyle ':completion:*' menu select
 # Auto correction:
 setopt correct
-
-alias develop_ruby_project="cd /media/data/workspace/Ruby/Project/Tourism && rvm 1.9.3"
-alias enter_chroot="gksudo ls && sudo chroot /media/data/servers"
-
-# RVM:
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
