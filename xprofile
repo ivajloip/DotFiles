@@ -1,0 +1,2 @@
+setxkbmap -layout us,bg
+setxkbmap -option "ctrl:nocaps,grp:alt_shift_toggle"
