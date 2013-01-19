@@ -1,0 +1,16 @@
+[user]
+	name = Ivaylo Petrov
+	email = ivajloip@gmail.com
+ 
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  ca = commit -a
+  st = status
+
+[github]
+  user = ivajloip
+
+[branch]
+  autosetuprebase = always

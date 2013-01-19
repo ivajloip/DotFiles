@@ -9,3 +9,4 @@ ln -s $cur_dir/xxkbrc ~/.xxkbrc
 ln -s $cur_dir/Xdefaults ~/.Xdefaults
 ln -s $cur_dir/vim ~/.vim
 ln -s $cur_dir/xprofile ~/.xprofile
+ln -s $cur_dir/gitconfig ~/.gitconfig
