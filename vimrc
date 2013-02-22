@@ -31,6 +31,8 @@ set wildmenu
 imap <F2> <Esc><F2>
 nmap <F2> :w<CR>
 
+map <leader>nt :NERDTree<CR>
+
 " other setings
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp1251

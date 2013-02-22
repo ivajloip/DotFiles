@@ -1,10 +1,9 @@
-! Stolen zenburn theme from here: https://gist.github.com/564084
+! Terminal colors
 urxvt*background:  #3f3f3f
 urxvt*foreground:  #dcdccc
-urxvt*fading:      40
-urxvt*fadeColor:   #020202
 urxvt*cursorColor: #dcdccc
 
+! Colors for urxvt
 urxvt*color0:  #3f3f3f
 urxvt*color1:  #705050
 urxvt*color2:  #60b48a
@@ -23,6 +22,7 @@ urxvt*color13: #ec93d3
 urxvt*color14: #93e0e3
 urxvt*color15: #ffffff
 
+! disable scrall bar
 urxvt*scrollBar: false
 
 !! urxvt font configuration:
@@ -30,3 +30,6 @@ urxvt*boldColors: on
 urxvt*font:       xft:liberation mono:pixelsize=15:antialias=true:hinting=true:medium
 urxvt*boldFont:   xft:liberation mono:pixelsize=15:antialias=true:hinting=true:bold
 
+URxvt.perl-ext-common: clipboard
+URxvt.keysym.Mod4-c: perl:clipboard:copy
+URxvt.keysym.Mod4-v: perl:clipboard:paste
