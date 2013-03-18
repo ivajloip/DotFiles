@@ -10,22 +10,28 @@ set shiftround
 set showmatch
 set cindent
 set nu!
+set wildmode=longest:full
+set wildmenu
 
-" map escape to kj
-inoremap kj <Esc>
-
-" Pathogen
+" Vundle
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc('~/.vim/vundle')
 
-filetype plugin on
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'The-NERD-tree'
+Bundle 'scrooloose/syntastic'
+  
+filetype plugin indent on
+
 syntax on
 colorscheme evening
 
-" Command complete with tab
-set wildmode=longest:full
-set wildmenu
+" map escape to kj
+inoremap kj <Esc>
 
 " Write file
 imap <F2> <Esc><F2>
@@ -35,15 +41,7 @@ map <leader>nt :NERDTree<CR>
 
 " other setings
 set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,cp1251
+set fileencodings=utf-8,cp1251
 set tags=./tags,tags
-
-function ToggleComment(str1, str2, comment)
-    if strlen(a:str1) > 0
-        return a:str1
-    else
-        return a:comment . a:str2
-    endif
-endfunction
 
 " end of file
