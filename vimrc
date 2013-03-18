@@ -44,4 +44,8 @@ set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set tags=./tags,tags
 
+" Enable this option if you want the cursor to jump to the first detected
+" error
+let g:syntastic_auto_jump=1
+
 " end of file
