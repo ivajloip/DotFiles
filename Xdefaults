@@ -31,5 +31,5 @@ urxvt*font:       xft:liberation mono:pixelsize=15:antialias=true:hinting=true:m
 urxvt*boldFont:   xft:liberation mono:pixelsize=15:antialias=true:hinting=true:bold
 
 URxvt.perl-ext-common: clipboard
-URxvt.keysym.Mod4-c: perl:clipboard:copy
-URxvt.keysym.Mod4-v: perl:clipboard:paste
+URxvt.keysym.Mod1-c: perl:clipboard:copy
+URxvt.keysym.Mod1-v: perl:clipboard:paste
