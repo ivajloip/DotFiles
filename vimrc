@@ -24,6 +24,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'The-NERD-tree'
 Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fireplace'
   
 filetype plugin indent on
 
