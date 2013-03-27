@@ -25,6 +25,8 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'The-NERD-tree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
   
 filetype plugin indent on
 
