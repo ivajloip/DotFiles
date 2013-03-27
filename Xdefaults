@@ -1,6 +1,8 @@
 ! Terminal colors
 urxvt*background:  #3f3f3f
 urxvt*foreground:  #dcdccc
+urxvt*fading:      40
+urxvt*fadeColor:   #020202
 urxvt*cursorColor: #dcdccc
 
 ! Colors for urxvt
@@ -30,6 +32,7 @@ urxvt*boldColors: on
 urxvt*font:       xft:liberation mono:pixelsize=15:antialias=true:hinting=true:medium
 urxvt*boldFont:   xft:liberation mono:pixelsize=15:antialias=true:hinting=true:bold
 
-URxvt.perl-ext-common: clipboard
+!! Copy and paste configuration
+urxvt.perl-ext-common: default,clipboard
 URxvt.keysym.Mod1-c: perl:clipboard:copy
 URxvt.keysym.Mod1-v: perl:clipboard:paste

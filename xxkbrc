@@ -6,6 +6,7 @@ XXkb.group.alt: 2
 
 XXkb.mainwindow.type: tray
 XXkb.mainwindow.enable: yes
+XXkb.mainwindow.label.enable: yes
 XXkb.mainwindow.geometry: 15x15+0+0
 XXkb.mainwindow.in_tray: GNOME2
 XXkb.mainwindow.image.1: en15.xpm

@@ -24,3 +24,5 @@ export RPROMPT="%F{blue}%B%~%b%f (%F{green}%B%n%b%f@%F{green}%B%m%b%f)"
 zstyle ':completion:*' menu select
 # Auto correction:
 setopt correct
+
+PATH="$PATH:$HOME/.rvm/bin:/media/data/workspace/programs/bin" # Add RVM to PATH for scripting
