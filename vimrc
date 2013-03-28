@@ -20,6 +20,7 @@ call pathogen#helptags()
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc('~/.vim/vundle')
 
+Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'The-NERD-tree'
