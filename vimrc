@@ -49,6 +49,9 @@ set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set tags=./tags,tags
 set colorcolumn=80
+set cursorline
+set cursorcolumn
+hi CursorLine cterm=bold ctermbg=gray guibg=gray 
 
 " Enable this option if you want the cursor to jump to the first detected
 " error
