@@ -28,6 +28,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
+Bundle 'vim-scripts/yavdb'
   
 filetype plugin indent on
 
@@ -47,6 +48,7 @@ map <leader>nt :NERDTree<CR>
 set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set tags=./tags,tags
+set colorcolumn=80
 
 " Enable this option if you want the cursor to jump to the first detected
 " error
