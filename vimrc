@@ -51,7 +51,7 @@ set tags=./tags,tags
 set colorcolumn=80
 set cursorline
 set cursorcolumn
-hi CursorLine cterm=bold ctermbg=52 guibg=52 # Dark red 
+hi CursorLine cterm=bold ctermbg=DarkRed guibg=DarkRed " Dark red 
 
 " Enable this option if you want the cursor to jump to the first detected
 " error
