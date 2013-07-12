@@ -2,7 +2,8 @@
 HISTFILE=~/.zsh_history
 HISTSIZE=8192
 SAVEHIST=2048
-bindkey -e
+bindkey -v
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/media/data/home/ivaylo/.zshrc'
@@ -35,6 +36,12 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Other variables customizations
 export EDITOR=vim
 export PAGER=less
+
+# useful vim key bindings
+bindkey -M viins 'kj' vi-cmd-mode
+bindkey -M vicmd '?' history-incremental-search-forward
+bindkey -M vicmd '/' history-incremental-search-backward
+bindkey -M viins '^R' history-incremental-search-backward
 
 # chromium cache configuration
 export CHROMIUM_USER_FLAGS="--disk-cache-dir=/tmp --disk-cache-size=50000000"
