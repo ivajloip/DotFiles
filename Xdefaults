@@ -33,6 +33,7 @@ urxvt*font:       xft:liberation mono:pixelsize=15:antialias=true:hinting=true:m
 urxvt*boldFont:   xft:liberation mono:pixelsize=15:antialias=true:hinting=true:bold
 
 !! Copy and paste configuration
+URxvt.perl-lib: .config/urxvt/
 urxvt.perl-ext-common: default,clipboard
 URxvt.keysym.Mod1-c: perl:clipboard:copy
 URxvt.keysym.Mod1-v: perl:clipboard:paste
