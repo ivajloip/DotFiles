@@ -27,8 +27,12 @@ Bundle 'The-NERD-tree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-rails'
 Bundle 'guns/vim-clojure-static'
 Bundle 'vim-scripts/yavdb'
+Bundle 'benmills/vimux'
+Bundle 'sjl/gundo.vim'
   
 filetype plugin indent on
 
@@ -41,8 +45,10 @@ inoremap kj <Esc>
 " Write file
 imap <F2> <Esc><F2>
 nmap <F2> :w<CR>
+nmap <F9> :source .vimrc<CR>
 
 map <leader>nt :NERDTree<CR>
+map <leader>gu :GundoToggle<CR>
 
 " other setings
 set encoding=utf-8
@@ -56,5 +62,8 @@ hi CursorLine cterm=bold ctermbg=DarkRed guibg=DarkRed " Dark red
 " Enable this option if you want the cursor to jump to the first detected
 " error
 let g:syntastic_auto_jump=1
+
+" Automatically close the Gundo windows when reverting
+let g:gundo_close_on_revert=1
 
 " end of file
