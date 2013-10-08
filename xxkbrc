@@ -6,12 +6,15 @@ XXkb.group.alt: 2
 
 XXkb.mainwindow.type: tray
 XXkb.mainwindow.enable: yes
-!XXkb.mainwindow.label.enable: yes
+XXkb.mainwindow.label.enable: no
 XXkb.mainwindow.geometry: 15x15+0+0
 XXkb.mainwindow.in_tray: GNOME2
 XXkb.mainwindow.image.1: en15.xpm
 XXkb.mainwindow.image.2: bg15.xpm
 XXkb.button.enable: no
+
+XXkb.*.label.foreground: white
+XXkb.*.label.background: blue4
 
 XXkb.*.border.color: black
 XXkb.*.border.width: 0
@@ -20,6 +23,7 @@ XXkb.controls.add_when_start: yes
 XXkb.controls.add_when_create: yes
 XXkb.controls.add_when_change: yes
 XXkb.controls.two_state: yes
+! XXkb.controls.focusout: no
 ! XXkb.controls.button_delete: yes
 ! XXkb.controls.button_delete_and_forget: yes
 ! XXkb.controls.mainwindow_delete: yes
