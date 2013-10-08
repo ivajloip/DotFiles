@@ -115,54 +115,54 @@ snippet page
 	${1:page}~\pageref{${2}}${3}
 # Theorem
 snippet th
-	\newtheorem*{th${1:1}}{Теорема}
+	\newtheorem*{th${1:1}}{Theorem}
 	\begin{th$1}
 	  ${2}
-	\end{th$1}
+	\end{th$1}${3}
 # Definition
 snippet def
-	\newtheorem*{def${1:1}}{Дефиниция}
+	\newtheorem*{def${1:1}}{Definition}
 	\begin{def$1}
 	  ${2}
 	\end{def$1}
 # Lemma
 snippet lem
-	\newtheorem*{${1:lem1}}{Лема}
+	\newtheorem*{${1:lem1}}{Lemma}
 	\begin{$1}
 	  ${2}
 	\end{$1}
 # Statement 
 snippet st
-	\newtheorem*{${1:st1}}{Твърдение}
+	\newtheorem*{${1:st1}}{Statement}
 	\begin{$1}
 	${2}
 	\end{$1}
 # Proof
 snippet pr
-	\begin{proof}[Доказателство:]
+	\begin{proof}[Proof:]
 		${1}
 	\end{proof}
 # Note
 snippet note
-	\newtheorem*{${3:note}${1}}{Бележка}
-	\begin{$3$1}
+	\newtheorem*{note${1:1}}{Note}
+	\begin{note$1}
 		${2}
-	\end{$3$1}
+	\end{note$1}
 # property
 snippet prop
-	\newtheorem*{prop${1:1}}{Свойство}
+	\newtheorem*{prop${1:1}}{Property}
 	\begin{prop$1}
 		${2}
 	\end{prop$1}
 # example
 snippet ex
-	\newtheorem*{ex${1:1}}{Пример}
+	\newtheorem*{ex${1:1}}{Example}
 	\begin{ex$1}
 		${2}
 	\end{ex$1}
 # exercise
 snippet task
-	\newtheorem*{task${1:1}}{Задача ${2}}
+	\newtheorem*{task${1:1}}{Task ${2}}
 	\begin{task$1}
 		${3}
 	\end{task$1}
@@ -185,3 +185,14 @@ snippet sum
 	\sum\limits_{${1}}^{${2}} ${3}
 snippet termv
 	\lVert ${1:\tau} \rVert ^ {\mathcal{A}} [${2:\vartheta}${3:}]
+# bold
+snippet bf 
+	\textbf{${1}}${2}
+# 
+snippet em 
+	\emph{${1}}${2}
+# 
+snippet ls 
+	\begin{lstlisting}[frame=single]
+		${1}
+	\end{lstlisting}
