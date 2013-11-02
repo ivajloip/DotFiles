@@ -33,6 +33,7 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'vim-scripts/yavdb'
 Bundle 'benmills/vimux'
 Bundle 'sjl/gundo.vim'
+Bundle 'tristen/vim-sparkup'
   
 filetype plugin indent on
 
