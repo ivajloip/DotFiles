@@ -62,6 +62,7 @@ hi CursorLine cterm=bold ctermbg=DarkRed guibg=DarkRed " Dark red
 hi SpellBad cterm=underline ctermbg=Black ctermfg=Magenta gui=underline guibg=Black guifg=Magenta
 
 set dir=/tmp/
+set pastetoggle=<F3>
 
 " Enable this option if you want the cursor to jump to the first detected
 " error
