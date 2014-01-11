@@ -19,3 +19,4 @@ nmap <F5> :call VimuxRunCommand('cd $PWD; pdflatex ' . expand("%") . ' &&
       \ evince ' . expand("%:r") . '.pdf')<CR>
 
 set spell spelllang=en_us
+set textwidth=80
