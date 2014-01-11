@@ -15,4 +15,7 @@ iab Theta \Theta
 iab delta \delta
 
 set makeprg=pdflatex\ %\ &&\ evince\ %:r.pdf
+nmap <F5> :call VimuxRunCommand('cd $PWD; pdflatex ' . expand("%") . ' && 
+      \ evince ' . expand("%:r") . '.pdf')<CR>
+
 set spell spelllang=en_us
