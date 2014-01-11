@@ -55,6 +55,7 @@ map <leader>gu :GundoToggle<CR>
 set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set tags=./tags,tags
+set history=1000
 set colorcolumn=80
 set cursorline
 set cursorcolumn
