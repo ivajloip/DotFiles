@@ -50,6 +50,7 @@ nmap <F9> :source .vimrc<CR>
 
 map <leader>nt :NERDTree<CR>
 map <leader>gu :GundoToggle<CR>
+map <leader><Space> :noh<CR>
 
 " other setings
 set encoding=utf-8
@@ -64,6 +65,11 @@ hi SpellBad cterm=underline ctermbg=Black ctermfg=Magenta gui=underline guibg=Bl
 
 set dir=/tmp/
 set pastetoggle=<F3>
+
+" Add bulgarian as an input language, allowing keyboard bindings to work
+set keymap=bulgarian-bds
+set iminsert=0
+set imsearch=-1
 
 " Enable this option if you want the cursor to jump to the first detected
 " error
