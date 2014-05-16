@@ -72,6 +72,8 @@ set keymap=bulgarian-bds
 set iminsert=0
 set imsearch=-1
 
+autocmd BufWritePre *.{tex,rb,py,c,cpp,h,hpp,clj} :%s/\s\+$//e
+
 " Enable this option if you want the cursor to jump to the first detected
 " error
 let g:syntastic_auto_jump=1
