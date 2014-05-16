@@ -34,6 +34,7 @@ Bundle 'vim-scripts/yavdb'
 Bundle 'benmills/vimux'
 Bundle 'sjl/gundo.vim'
 Bundle 'tristen/vim-sparkup'
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
   
 filetype plugin indent on
 
