@@ -3,11 +3,22 @@
 	email = ivajloip@gmail.com
  
 [alias]
-  co = checkout
   br = branch
-  ci = commit
   ca = commit -a
+  ci = commit
+  co = checkout
+  ff = merge --ff-only @{u}
+  nb = checkout -b
   st = status
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+
+[core]
+  whitespace = -indent-with-non-tab, trailing-space, -cr-at-eol, space-before-tab
+  logallrefupdates = true
+  editor = /usr/bin/env vim
+
+[apply]
+  whitespace=fix
 
 [github]
   user = ivajloip
