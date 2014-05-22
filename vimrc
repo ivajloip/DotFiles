@@ -61,11 +61,14 @@ set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set tags=./tags,tags
 set history=1000
-set colorcolumn=80
 set cursorline
 set cursorcolumn
 hi CursorLine cterm=bold ctermbg=DarkRed guibg=DarkRed " Dark red 
 hi SpellBad cterm=underline ctermbg=Black ctermfg=Magenta gui=underline guibg=Black guifg=Magenta
+
+if v:version >= 703
+  set colorcolumn=80
+endif
 
 set dir=/tmp/
 set pastetoggle=<F3>
