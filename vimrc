@@ -38,6 +38,7 @@ Bundle 'benmills/vimux'
 Bundle 'sjl/gundo.vim'
 Bundle 'tristen/vim-sparkup'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
+Bundle 'jgdavey/vim-turbux'
   
 filetype plugin indent on
 
@@ -79,6 +80,8 @@ set iminsert=0
 set imsearch=-1
 
 autocmd BufWritePre *.{tex,rb,py,c,cpp,h,hpp,clj} :%s/\s\+$//e
+
+let g:VimuxUseNearestPane = 1
 
 " Enable this option if you want the cursor to jump to the first detected
 " error
