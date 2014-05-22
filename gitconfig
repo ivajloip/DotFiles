@@ -25,3 +25,13 @@
 
 [branch]
   autosetuprebase = always
+
+[merge]
+  ff = only
+  tool = vimdiff
+
+[mergetool]
+  prompt = false
+
+[color]
+  ui = auto
