@@ -13,6 +13,9 @@ set nu!
 set wildmode=longest:full
 set wildmenu
 
+" Remap <leader> to ','
+let mapleader = ","
+
 " Vundle
 filetype off
 call pathogen#runtime_append_all_bundles()
