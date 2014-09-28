@@ -1,39 +1,42 @@
-! Terminal colors
-urxvt*background:  #3f3f3f
-urxvt*foreground:  #dcdccc
-urxvt*fading:      40
-urxvt*fadeColor:   #020202
-urxvt*cursorColor: #dcdccc
-
 ! Colors for urxvt
-urxvt*color0:  #3f3f3f
-urxvt*color1:  #705050
-urxvt*color2:  #60b48a
-urxvt*color3:  #dfaf8f
-urxvt*color4:  #506070
-urxvt*color5:  #dc8cc3
-urxvt*color6:  #8cd0d3
-urxvt*color7:  #dcdccc
+urxvt*background:              #002b36
+urxvt*foreground:              #839496
+urxvt*fading:                  40
+urxvt*fadeColor:               #002b36
+urxvt*cursorColor:             #93a1a1
+urxvt*pointerColorBackground:  #586e75
+urxvt*pointerColorForeground:  #cb4b16
 
-urxvt*color8:  #708090
-urxvt*color9:  #cc9393
-urxvt*color10: #7f9f7f
-urxvt*color11: #f0dfaf
-urxvt*color12: #94bff3
-urxvt*color13: #ec93d3
-urxvt*color14: #93e0e3
-urxvt*color15: #ffffff
+urxvt*color0:                  #073642
+urxvt*color1:                  #dc322f
+urxvt*color2:                  #859900
+urxvt*color3:                  #b58900
+urxvt*color4:                  #268bd2
+urxvt*color5:                  #d33682
+urxvt*color6:                  #2aa198
+urxvt*color7:                  #eee8d5
+urxvt*color8:                  #002b36
+urxvt*color9:                  #cb4b16
+urxvt*color10:                 #586e75
+urxvt*color11:                 #657b83
+urxvt*color12:                 #839496
+urxvt*color13:                 #6c71c4
+urxvt*color14:                 #93a1a1
+urxvt*color15:                 #fdf6e3
+
 
 ! disable scrall bar
 urxvt*scrollBar: false
+
 
 !! urxvt font configuration:
 urxvt*boldColors: on
 urxvt*font:       xft:liberation mono:pixelsize=13:antialias=true:hinting=true:medium
 urxvt*boldFont:   xft:liberation mono:pixelsize=13:antialias=true:hinting=true:bold
 
+
 !! Copy and paste configuration
-URxvt.perl-lib: .config/urxvt/
+urxvt.perl-lib: .config/urxvt/
 urxvt.perl-ext-common: default,clipboard
-URxvt.keysym.Mod1-c: perl:clipboard:copy
-URxvt.keysym.Mod1-v: perl:clipboard:paste
+urxvt.keysym.Mod1-c: perl:clipboard:copy
+urxvt.keysym.Mod1-v: perl:clipboard:paste
