@@ -39,6 +39,9 @@ Bundle 'sjl/gundo.vim'
 Bundle 'tristen/vim-sparkup'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
 Bundle 'jgdavey/vim-turbux'
+
+" Experimental plugins
+Bundle 'mileszs/ack.vim'
   
 filetype plugin indent on
 
