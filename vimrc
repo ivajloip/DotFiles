@@ -91,4 +91,7 @@ let g:syntastic_auto_jump=1
 " Automatically close the Gundo windows when reverting
 let g:gundo_close_on_revert=1
 
+set guioptions-=m
+set guioptions-=T
+
 " end of file
