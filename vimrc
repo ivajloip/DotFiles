@@ -64,8 +64,9 @@ set tags=./tags,tags
 set history=1000
 set cursorline
 set cursorcolumn
-hi CursorLine cterm=bold ctermbg=DarkRed guibg=DarkRed " Dark red 
+hi CursorLine cterm=bold ctermbg=DarkRed guibg=DarkRed " Dark red
 hi SpellBad cterm=underline ctermbg=Black ctermfg=Magenta gui=underline guibg=Black guifg=Magenta
+set timeoutlen=300
 
 if v:version >= 703
   set colorcolumn=80
