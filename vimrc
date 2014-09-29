@@ -45,6 +45,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'Valloric/YouCompleteMe'
   
 filetype plugin indent on
 

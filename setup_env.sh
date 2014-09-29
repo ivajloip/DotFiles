@@ -10,6 +10,7 @@ ln -s $cur_dir/Xdefaults ~/.Xdefaults
 ln -s $cur_dir/vim ~/.vim
 ln -s $cur_dir/xprofile ~/.xprofile
 ln -s $cur_dir/gitconfig ~/.gitconfig
+ln -s $cur_dir/ycm_extra_conf.py ~/.ycm_extra_conf.py
 
 # Fix for vundle install
 rmdir $cur_dir/vim/bundle/vundle
