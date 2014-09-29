@@ -42,6 +42,7 @@ Bundle 'jgdavey/vim-turbux'
 
 " Experimental plugins
 Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim.git'
   
 filetype plugin indent on
 
@@ -58,6 +59,7 @@ nmap <F9> :source .vimrc<CR>
 
 map <leader>nt :NERDTree<CR>
 map <leader>gu :GundoToggle<CR>
+map <leader>cp :CtrlP<CR>
 map <leader><Space> :noh<CR>
 
 " other setings
