@@ -43,11 +43,13 @@ Bundle 'jgdavey/vim-turbux'
 " Experimental plugins
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim.git'
+Bundle 'altercation/vim-colors-solarized.git'
   
 filetype plugin indent on
 
 syntax on
-colorscheme evening
+set background=dark
+colorscheme solarized
 
 " map escape to kj
 inoremap kj <Esc>
@@ -69,7 +71,7 @@ set tags=./tags,tags
 set history=1000
 set cursorline
 set cursorcolumn
-hi CursorLine cterm=bold ctermbg=DarkRed guibg=DarkRed " Dark red
+hi CursorLine cterm=bold
 hi SpellBad cterm=underline ctermbg=Black ctermfg=Magenta gui=underline guibg=Black guifg=Magenta
 set timeoutlen=300
 
