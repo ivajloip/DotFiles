@@ -48,6 +48,7 @@ Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'christoomey/vim-tmux-navigator'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 
@@ -115,5 +116,10 @@ let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]
 
 set guioptions-=m
 set guioptions-=T
+
+" vim-airline
+let g:airline_theme             = 'wombat'
+let g:airline#extensions#syntastic#enabled = 1
+set laststatus=2
 
 " end of file
