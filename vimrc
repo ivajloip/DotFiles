@@ -46,6 +46,8 @@ Bundle 'altercation/vim-colors-solarized.git'
 
 " Experimental plugins
 Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 filetype plugin indent on
 
@@ -104,6 +106,12 @@ let g:gundo_close_on_revert=1
 let g:ycm_confirm_extra_conf = 1
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
 let g:ycm_seed_identifiers_with_syntax = 1
+
+" ultishnips
+let g:UltiSnipsExpandTrigger="<leader>e"
+let g:UltiSnipsJumpForwardTrigger="<leader>e"
+let g:UltiSnipsJumpBackwardTrigger="<leader>E"
+let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]
 
 set guioptions-=m
 set guioptions-=T
