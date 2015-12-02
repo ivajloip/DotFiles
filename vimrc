@@ -50,6 +50,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Bundle 'bling/vim-airline'
 Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'tpope/vim-repeat.git'
+Bundle 'AndrewRadev/switch.vim'
 
 filetype plugin indent on
 
@@ -65,10 +67,23 @@ imap <F2> <Esc><F2>
 nmap <F2> :w<CR>
 nmap <F9> :source .vimrc<CR>
 
+" Open NERDTree with the current directory
 map <leader>nt :NERDTree<CR>
+
+" Open NERDTree with the current file
+map <leader>ntf :NERDTreeFind<CR>
+
+" Open Gundo
 map <leader>gu :GundoToggle<CR>
+
+" Open CtrlP
 map <leader>cp :CtrlP<CR>
+
+" Clear the search highlights
 map <leader><Space> :noh<CR>
+
+" Look for the word under the cursor
+nmap <leader>ack :execute("Ack '\\b" . expand("<cword>") . "\\b'")<CR>
 
 " other setings
 set encoding=utf-8
@@ -142,5 +157,11 @@ let g:rbpt_colorpairs = [
     \ ['darkred',     'DarkOrchid3'],
     \ ['red',         'firebrick3'],
     \ ]
+
+" Nerd tree
+let g:NERDTreeQuitOnOpen = 1
+
+" Ignore some files
+set wildignore+=*/.git/*,*.class,*.jar,*.zip
 
 " end of file
