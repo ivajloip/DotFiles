@@ -39,14 +39,14 @@ Bundle 'sjl/gundo.vim'
 Bundle 'tristen/vim-sparkup'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
 Bundle 'jgdavey/vim-turbux'
-
-" Experimental plugins
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'altercation/vim-colors-solarized.git'
+
+" Experimental plugins
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'Valloric/YouCompleteMe'
-  
+
 filetype plugin indent on
 
 syntax on
@@ -99,6 +99,11 @@ let g:syntastic_auto_jump=1
 
 " Automatically close the Gundo windows when reverting
 let g:gundo_close_on_revert=1
+
+" YouCompleteMe
+let g:ycm_confirm_extra_conf = 1
+let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
+let g:ycm_seed_identifiers_with_syntax = 1
 
 set guioptions-=m
 set guioptions-=T
