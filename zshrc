@@ -27,6 +27,10 @@ zstyle ':completion:*' menu select
 setopt correct
 setopt autopushd
 
+if ( command -v vimx > /dev/null 2>&1 ); then
+  alias vim="vimx"
+fi
+
 # Path customizations
 PATH="$PATH:$HOME//.rvm/bin:/media/data/workspace/programs/bin" # Add RVM to PATH for scripting
 
