@@ -52,6 +52,7 @@ Bundle 'bling/vim-airline'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-repeat.git'
 Bundle 'AndrewRadev/switch.vim'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 filetype plugin indent on
 
@@ -160,6 +161,11 @@ let g:rbpt_colorpairs = [
 
 " Nerd tree
 let g:NERDTreeQuitOnOpen = 1
+
+" Markdown preveiw
+let vim_markdown_preview_hotkey='<leader>mp'
+let vim_markdown_preview_github=1
+let vim_markdown_preview_use_xdg_open=1
 
 " Ignore some files
 set wildignore+=*/.git/*,*.class,*.jar,*.zip
