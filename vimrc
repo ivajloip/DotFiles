@@ -53,6 +53,7 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-repeat.git'
 Bundle 'AndrewRadev/switch.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Bundle 'vim-airline/vim-airline-themes'
 
 filetype plugin indent on
 
