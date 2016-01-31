@@ -32,7 +32,7 @@ if ( command -v vimx > /dev/null 2>&1 ); then
 fi
 
 # Path customizations
-PATH="$PATH:$HOME//.rvm/bin:/media/data/workspace/programs/bin" # Add RVM to PATH for scripting
+PATH="$PATH:$HOME//.rvm/bin:$HOME//workspace/bin" # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
