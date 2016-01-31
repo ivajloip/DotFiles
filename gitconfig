@@ -35,3 +35,6 @@
 
 [color]
   ui = auto
+
+[credential]
+  helper = /usr/libexec/git-core/git-credential-gnome-keyring
