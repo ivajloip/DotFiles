@@ -200,7 +200,7 @@ myweather.icon:connect_signal("mouse::enter", weather_tooltip.update)
 -- cpu
 mycpuusage = lain.widgets.cpu({
   settings = function()
-    widget:set_markup(markup("#0a47f8", cpu_now.usage .. "% "))
+    widget:set_markup(markup("#0a47f8", string.format("%02d", cpu_now.usage) .. "% "))
   end
 })
 
