@@ -161,7 +161,7 @@ end
 
 myweather = lain.widgets.weather({
   city_id = 6432801,
-  timeout = 60,
+  timeout = 1200,
   settings = function()
     update_weather_field("temp", weather_now, "main", "temp")
     update_weather_field("humidity", weather_now, "main", "humidity")
