@@ -213,10 +213,13 @@ mymem = lain.widgets.mem({
 })
 
 -- battery
+local battery_tooltip
+local battery_info
 baticon = wibox.widget.imagebox(beautiful.widget_battery)
 mybattery = lain.widgets.bat({
   battery = "BAT1",
   settings = function()
+    battery_info = bat_now
     if bat_now.perc == "N/A" then
       bat_now.perc = "AC"
       baticon:set_image(beautiful.widget_ac)
@@ -227,10 +230,31 @@ mybattery = lain.widgets.bat({
     else
       baticon:set_image(beautiful.widget_battery)
     end
-    widget:set_markup(" ϟ " .. bat_now.perc .. "% ")
+    widget:set_markup(markup("#ff8b0f", " ϟ " .. bat_now.perc .. "% "))
   end
 })
 
+if not battery_tooltip then
+  battery_tooltip = awful.tooltip({})
+  function battery_tooltip:update()
+    if not battery_info["time"] then
+      return
+    end
+
+    local text = "Status: " .. battery_info["status"] .. "\n"
+    .. "Percentage: " .. battery_info["perc"] .. "%\n"
+    .. "Time: " .. battery_info["time"] .. "\n"
+    .. "Watt: " .. battery_info["watt"] .. "\n"
+
+    battery_tooltip:set_markup(markup("#ff8b0f", text))
+  end
+  battery_tooltip:update()
+end
+battery_tooltip:add_to_object(mybattery)
+
+mybattery:connect_signal("mouse::enter", battery_tooltip.update)
+
+-- volume
 volumewidget = lain.widgets.alsa({
   timeout = 60,
   settings = function()
@@ -322,6 +346,7 @@ for s = 1, screen.count() do
     right_layout:add(myweather.icon)
     right_layout:add(mycpuusage)
     right_layout:add(mymem)
+    right_layout:add(baticon)
     right_layout:add(mybattery)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
