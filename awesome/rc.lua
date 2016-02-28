@@ -494,6 +494,16 @@ clientkeys = awful.util.table.join(
         end)
 )
 
+local raise_last_active_window = function()
+    local screen = mouse.screen
+    local selected_client = awful.client.focus.history.get(screen, 0)
+    if not selected_client then
+        return nil
+    end
+    client.focus = selected_client
+    client.focus:raise()
+end
+
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it works on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
@@ -505,6 +515,7 @@ for i = 1, 9 do
                         local tag = awful.tag.gettags(screen)[i]
                         if tag then
                            awful.tag.viewonly(tag)
+                           raise_last_active_window()
                         end
                   end),
         awful.key({ modkey, "Control" }, "#" .. i + 9,
@@ -513,6 +524,7 @@ for i = 1, 9 do
                       local tag = awful.tag.gettags(screen)[i]
                       if tag then
                          awful.tag.viewtoggle(tag)
+                           raise_last_active_window()
                       end
                   end),
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
@@ -520,6 +532,7 @@ for i = 1, 9 do
                       local tag = awful.tag.gettags(client.focus.screen)[i]
                       if client.focus and tag then
                           awful.client.movetotag(tag)
+                          raise_last_active_window()
                      end
                   end),
         awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
@@ -527,6 +540,7 @@ for i = 1, 9 do
                       local tag = awful.tag.gettags(client.focus.screen)[i]
                       if client.focus and tag then
                           awful.client.toggletag(tag)
+                          raise_last_active_window()
                       end
                   end))
 end
