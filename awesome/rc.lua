@@ -584,7 +584,7 @@ awful.rules.rules = {
     { rule = { class = "Claws-mail" },
       properties = { tag = tags[1][1], switchtotag = false, minimized = true } },
     -- Set Empathy to always map on tags number 3 of screen 1.
-    { rule = { class = "Empathy" },
+    { rule = { name = "Contact List" },
       properties = { tag = tags[1][3], switchtotag = true } },
     -- Set Evolution to always map on tags number 3 of screen 1.
     { rule = { class = "Evolution" },
