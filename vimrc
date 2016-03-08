@@ -54,6 +54,7 @@ Bundle 'tpope/vim-repeat.git'
 Bundle 'AndrewRadev/switch.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Bundle 'vim-airline/vim-airline-themes'
+Plugin 'fatih/vim-go'
 
 filetype plugin indent on
 
@@ -86,6 +87,33 @@ map <leader><Space> :noh<CR>
 
 " Look for the word under the cursor
 nmap <leader>ack :execute("Ack '\\b" . expand("<cword>") . "\\b'")<CR>
+
+" Run the current go file
+au FileType go nmap <leader>r <Plug>(go-run)
+
+" Build the current go file
+au FileType go nmap <leader>b <Plug>(go-build)
+
+" Test the current go file
+au FileType go nmap <leader>t <Plug>(go-test)
+
+" Run coverage on the current go file
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+" Open the relevant Godoc for the word under the cursor
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+
+" Open the Godoc in browser
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+
+" Show a list of interfaces which is implemented by the type under your cursor
+au FileType go nmap <Leader>s <Plug>(go-implements)
+
+" Show time info about the word under the cursor
+au FileType go nmap <Leader>i <Plug>(go-info)
+
+" Rename a variable in the current go file
+au FileType go nmap <Leader>e <Plug>(go-rename)
 
 " other setings
 set encoding=utf-8
@@ -167,6 +195,9 @@ let g:NERDTreeQuitOnOpen = 1
 let vim_markdown_preview_hotkey='<leader>mp'
 let vim_markdown_preview_github=1
 let vim_markdown_preview_use_xdg_open=1
+
+" format with goimports instead of gofmt
+let g:go_fmt_command = "goimports"
 
 " Ignore some files
 set wildignore+=*/.git/*,*.class,*.jar,*.zip
