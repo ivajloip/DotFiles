@@ -40,6 +40,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Other variables customizations
 export EDITOR=vim
 export PAGER=less
+export GOPATH=$HOME/workspace/go
 
 # useful vim key bindings
 bindkey -M viins 'kj' vi-cmd-mode
