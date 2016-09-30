@@ -3,8 +3,7 @@ set nocompatible
 set incsearch
 set ignorecase
 set autoindent
-set tabstop=2
-set sw=2
+set tabstop=2 softtabstop=2 sw=2
 set expandtab
 set shiftround
 set showmatch
