@@ -10,3 +10,6 @@
 [submodule "awesome/utils"]
 	path = awesome/utils
 	url = https://github.com/Mic92/utils.git
+[submodule "urxvt-perls"]
+	path = urxvt-perls
+	url = https://github.com/muennich/urxvt-perls.git

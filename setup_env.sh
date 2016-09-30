@@ -11,8 +11,7 @@ ln -s $cur_dir/vim ~/.vim
 ln -s $cur_dir/xprofile ~/.xprofile
 ln -s $cur_dir/gitconfig ~/.gitconfig
 ln -s $cur_dir/ycm_extra_conf.py ~/.ycm_extra_conf.py
+ln -s $cur_dir/awesome ~/.config/
 
-# Fix for vundle install
-rmdir $cur_dir/vim/bundle/vundle
-cd $cur_dir/vim/bundle/
-git clone https://github.com/gmarik/vundle.git
+mkdir $HOME/.config/urxvt/
+ln -s $cur_dir/urxvt-perls/clipboard $HOME/.config/urxvt/
