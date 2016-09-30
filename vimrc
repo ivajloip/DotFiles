@@ -54,6 +54,7 @@ Bundle 'AndrewRadev/switch.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Bundle 'vim-airline/vim-airline-themes'
 Plugin 'fatih/vim-go'
+Plugin 'hynek/vim-python-pep8-indent'
 
 filetype plugin indent on
 
