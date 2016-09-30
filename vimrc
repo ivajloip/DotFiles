@@ -197,6 +197,7 @@ let vim_markdown_preview_use_xdg_open=1
 
 " format with goimports instead of gofmt
 let g:go_fmt_command = "goimports"
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
 " Ignore some files
 set wildignore+=*/.git/*,*.class,*.jar,*.zip
