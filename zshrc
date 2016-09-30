@@ -35,9 +35,6 @@ if ( command -v vimx > /dev/null 2>&1 ); then
   alias vim="vimx"
 fi
 
-# Path customizations
-PATH="$PATH:$HOME//.rvm/bin:$HOME//workspace/bin" # Add RVM to PATH for scripting
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -45,6 +42,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export EDITOR=vim
 export PAGER=less
 export GOPATH=$HOME/workspace/go
+export GOROOT=$HOME/workspace/programs/go
+export GOBIN=$GOPATH/bin
+
+# Path customizations
+PATH="$GOBIN:$HOME//.rvm/bin:$HOME//workspace/bin:$JAVA_HOME/bin:$PATH" # Add RVM to PATH for scripting
 
 # useful vim key bindings
 bindkey -M viins 'kj' vi-cmd-mode
