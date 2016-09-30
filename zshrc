@@ -1,7 +1,11 @@
 # Lines configured by zsh-newuser-install
+
 HISTFILE=~/.zsh_history
-HISTSIZE=8192
-SAVEHIST=2048
+HISTSIZE=16384
+SAVEHIST=8192
+
+setopt hist_expire_dups_first
+
 bindkey -v
 
 # End of lines configured by zsh-newuser-install
