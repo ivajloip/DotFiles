@@ -1,40 +1,55 @@
-[user]
-	name = Ivaylo Petrov
-	email = ivajloip@gmail.com
- 
 [alias]
   br = branch
   ca = commit -a
   ci = commit
+  cm = commit --amend
   co = checkout
+  dt = difftool -g
   ff = merge --ff-only @{u}
   nb = checkout -b
+  rb = rebase
   st = status
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lb = log --graph --simplify-by-decoration --pretty=format:'%d' --all
+
+[apply]
+  whitespace=fix
+
+[branch]
+  autosetuprebase = always
+
+[color]
+  ui = auto
 
 [core]
   whitespace = -indent-with-non-tab, trailing-space, -cr-at-eol, space-before-tab
   logallrefupdates = true
   editor = /usr/bin/env vim
 
-[apply]
-  whitespace=fix
+[credential]
+  helper = /usr/local/bin/git-credential-gnome-keyring
+
+[diff]
+  tool = vimdiff
+  guitool = meld
 
 [github]
   user = ivajloip
 
-[branch]
-  autosetuprebase = always
-
 [merge]
   ff = only
   tool = vimdiff
+  guitool = meld
 
 [mergetool]
   prompt = false
 
-[color]
-  ui = auto
+[user]
+	name = Ivaylo Petrov
+	email = ivajloip@gmail.com
 
-[credential]
-  helper = /usr/libexec/git-core/git-credential-gnome-keyring
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
