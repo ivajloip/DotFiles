@@ -114,6 +114,13 @@ au FileType go nmap <Leader>i <Plug>(go-info)
 " Rename a variable in the current go file
 au FileType go nmap <Leader>e <Plug>(go-rename)
 
+" Go to definition in a split
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+" Go to definition in a vertical split
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+" Go to definition in a new tab
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
 " other setings
 set encoding=utf-8
 set fileencodings=utf-8,cp1251
@@ -137,7 +144,7 @@ set keymap=bulgarian-bds
 set iminsert=0
 set imsearch=-1
 
-autocmd BufWritePre *.{tex,rb,py,c,cpp,h,hpp,clj} :%s/\s\+$//e
+autocmd BufWritePre *.{tex,rb,py,c,cpp,h,hpp,clj,go} :%s/\s\+$//e
 
 let g:VimuxUseNearestPane = 1
 
