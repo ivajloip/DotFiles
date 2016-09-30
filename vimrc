@@ -145,6 +145,8 @@ let g:VimuxUseNearestPane = 1
 " error
 let g:syntastic_auto_jump=1
 
+let g:syntastic_python_pylint_exec = 'python3-pylint'
+
 " Automatically close the Gundo windows when reverting
 let g:gundo_close_on_revert=1
 
