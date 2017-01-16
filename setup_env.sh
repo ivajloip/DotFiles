@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+git submodule update --init --recursive
+
 cur_dir=`pwd`
 
 ln -s $cur_dir/vimrc ~/.vimrc
