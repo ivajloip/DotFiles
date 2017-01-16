@@ -7,10 +7,12 @@
   dt = difftool -g
   ff = merge --ff-only @{u}
   nb = checkout -b
+  pullsm = submodule update --recursive --remote
   rb = rebase
   st = status
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lb = log --graph --simplify-by-decoration --pretty=format:'%d' --all
+  last = log -n 5 --pretty='format:%h %an <%aE> %aI %s'
 
 [apply]
   whitespace=fix
@@ -32,6 +34,7 @@
 [diff]
   tool = vimdiff
   guitool = meld
+  renames = 5
 
 [github]
   user = ivajloip
