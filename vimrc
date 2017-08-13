@@ -56,6 +56,8 @@ Plugin 'fatih/vim-go'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'rust-lang/rust.vim'
 
+Bundle 'pangloss/vim-javascript'
+
 filetype plugin indent on
 
 syntax on
@@ -211,6 +213,10 @@ let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
 " rust autoformat
 let g:rustfmt_autosave = 1
+
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
 
 " Ignore some files
 set wildignore+=*/.git/*,*.class,*.jar,*.zip
