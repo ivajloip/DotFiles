@@ -211,4 +211,9 @@ let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 " Ignore some files
 set wildignore+=*/.git/*,*.class,*.jar,*.zip
 
+nnoremap <leader>q :call ToggleQuickfix()<cr>
+nnoremap <leader>Q :cc<cr>
+nnoremap <leader>j :cnext<cr>
+nnoremap <leader>k :cprev<cr>
+
 " end of file
