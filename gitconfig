@@ -4,15 +4,20 @@
   ci = commit
   cm = commit --amend
   co = checkout
+  dc = diff --cached
   dt = difftool -g
+  fa = fetch --all
   ff = merge --ff-only @{u}
+  last = log -n 5 --pretty='format:%h %an <%aE> %aI %s'
+  lb = log --graph --simplify-by-decoration --pretty=format:'%d' --all
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
   nb = checkout -b
+  noff = merge --no-ff
+  pom = push origin master
+  pullff = pull --ff-only
   pullsm = submodule update --recursive --remote
   rb = rebase
   st = status
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lb = log --graph --simplify-by-decoration --pretty=format:'%d' --all
-  last = log -n 5 --pretty='format:%h %an <%aE> %aI %s'
 
 [apply]
   whitespace=fix
