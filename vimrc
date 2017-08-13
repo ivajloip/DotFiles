@@ -1,10 +1,9 @@
 " general settings
 set nocompatible
 set incsearch
-set ignorecase
+set ignorecase smartcase
 set autoindent
-set tabstop=2 softtabstop=2 sw=2
-set expandtab
+set tabstop=2 softtabstop=2 sw=2 expandtab
 set shiftround
 set showmatch
 set cindent
