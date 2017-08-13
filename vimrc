@@ -54,6 +54,7 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Bundle 'vim-airline/vim-airline-themes'
 Plugin 'fatih/vim-go'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'rust-lang/rust.vim'
 
 filetype plugin indent on
 
@@ -207,6 +208,9 @@ let vim_markdown_preview_use_xdg_open=1
 " format with goimports instead of gofmt
 let g:go_fmt_command = "goimports"
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+
+" rust autoformat
+let g:rustfmt_autosave = 1
 
 " Ignore some files
 set wildignore+=*/.git/*,*.class,*.jar,*.zip
