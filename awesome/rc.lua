@@ -98,7 +98,7 @@ end
 -- Create a laucher widget and a main menu
 local systemctl = "systemctl "
 
-local icon_path = "/usr/share/icons/oxygen/16x16/actions/"
+local icon_path = "/usr/share/icons/oxygen/base/16x16/actions/"
 
 local lock_prg = "bash /media/data/workspace/private/scripts/slock_with_monitor_off"
 
@@ -182,8 +182,8 @@ if not weather_tooltip then
       return
     end
 
-    local text = "Temperature: " .. weather_info["temp"] .. "°C \n"
-    .. "Description: " .. weather_info["description"] .. "\n"
+    local text = "<b>Current weather</b>:\nTemperature: " .. weather_info["temp"]
+    .. "°C \n" .. "Description: " .. weather_info["description"] .. "\n"
     .. "Wind: " .. weather_info["wind_speed"] .. " m/s, " .. weather_info["wind_deg"]
     .. "°, " .. weather_info["wind_gust"] .. " m/s" .. "\n"
     .. "Humidity: " .. weather_info["humidity"] .. "%\n"
@@ -463,7 +463,14 @@ globalkeys = awful.util.table.join(
 
 clientkeys = awful.util.table.join(
     awful.key({ modkey,           }, "f",      function (c) c.fullscreen = not c.fullscreen  end),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end),
+    awful.key({ modkey, "Shift"   }, "c",      function (c)
+      local new_client = awful.client.focus.history.previous ()
+      c:kill()
+      if new_client then
+        client.focus = new_client.focus
+        client.focus:raise()
+      end
+    end),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
@@ -699,13 +706,13 @@ run_once("xmodmap $HOME/.Xmodmap &")
 start_gnome_keyring()
 
 run_once("/usr/libexec/polkit-gnome-authentication-agent-1")
-run_once("gnome-encfs-manager &")
+--run_once("gnome-encfs-manager &")
 run_once("nm-applet &")
 --run_once("~/.config/awesome/workNetworkConnectionHelper.sh &")
 run_once("clipit &")
 awful.util.spawn_with_shell("killall xxkb; xxkb")
-run_once("~/.config/awesome/auto-start-helper.sh 'evolution --online' 'empathy' 'firefox'")
-run_once("blueman-applet &")
+run_once("~/.config/awesome/auto-start-helper.sh 'evolution --online' 'google-chrome'")
+--run_once("blueman-applet &")
 
 --run_once("sleep 3 && qdbus org.kde.kded /kded loadModule kdeconnect")
 
