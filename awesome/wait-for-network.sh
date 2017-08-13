@@ -1,7 +1,8 @@
 #!/bin/bash
 
-until wget -q -O - http://www.duckduckgo.com | grep 'Help Spread DuckDuckGo!' > /dev/null; do
+until wget -q -O - http://www.duckduckgo.com | grep "DuckDuckGo" | grep "track" > /dev/null; do
   sleep 2
+  notify-send -u critical -t 1500 "No internet connection detected. Maybe login is required."
 done
 
 for arg; do
