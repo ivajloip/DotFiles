@@ -149,7 +149,16 @@ set imsearch=-1
 
 autocmd BufWritePre *.{tex,rb,py,c,cpp,h,hpp,clj,go} :%s/\s\+$//e
 
+" vimux parameters
+
 let g:VimuxUseNearestPane = 1
+let g:VimuxHeight = 40
+let g:VimuxOrientation = "h"
+
+nnoremap <leader>vp :VimuxPromptCommand<CR>
+nnoremap <leader>vl :VimuxRunLastCommand<CR>
+nnoremap <leader>vq :VimuxCloseRunner<CR>
+
 
 " Enable this option if you want the cursor to jump to the first detected
 " error
@@ -219,7 +228,7 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 
 " Ignore some files
-set wildignore+=*/.git/*,*.class,*.jar,*.zip
+set wildignore+=*/.git/*,*.class,*.jar,*.zip,*.d
 
 nnoremap <leader>q :call ToggleQuickfix()<cr>
 nnoremap <leader>Q :cc<cr>
