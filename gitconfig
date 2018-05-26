@@ -29,35 +29,40 @@
   ui = auto
 
 [core]
-  whitespace = -indent-with-non-tab, trailing-space, -cr-at-eol, space-before-tab
-  logallrefupdates = true
   editor = /usr/bin/env vim
+  logallrefupdates = true
+  whitespace = -indent-with-non-tab, trailing-space, -cr-at-eol, space-before-tab
 
 [credential]
   helper = /usr/local/bin/git-credential-gnome-keyring
 
 [diff]
-  tool = vimdiff
+  algorithm = patience
+  compactionHeuristic = true
   guitool = meld
   renames = 5
+  tool = vimdiff
 
 [github]
   user = ivajloip
 
 [merge]
   ff = only
-  tool = vimdiff
   guitool = meld
+  tool = vimdiff
 
 [mergetool]
-  prompt = false
+  # No *.orig files left when using mergetool.
+  keepBackup = false
 
-[user]
-	name = Ivaylo Petrov
-	email = ivajloip@gmail.com
+  prompt = false
 
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+
+[user]
+	email = ivajloip@gmail.com
+	name = Ivaylo Petrov
