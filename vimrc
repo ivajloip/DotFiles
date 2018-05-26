@@ -67,11 +67,6 @@ colorscheme solarized
 " map escape to kj
 inoremap kj <Esc>
 
-" Write file
-imap <F2> <Esc><F2>
-nmap <F2> :w<CR>
-nmap <F9> :source .vimrc<CR>
-
 " Open NERDTree with the current directory
 map <leader>nt :NERDTree<CR>
 
