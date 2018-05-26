@@ -134,6 +134,9 @@ if v:version >= 703
   set colorcolumn=80
 endif
 
+" Start scrolling five lines before the horizontal window border
+set scrolloff=5
+
 set dir=/tmp/
 set pastetoggle=<F3>
 
