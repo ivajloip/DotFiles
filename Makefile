@@ -41,7 +41,8 @@ install-base-apps-debian: link-to-home
 		xsel \
 		x11-utils \
 		network-manager-gnome \
-		build-essentials
+		build-essentials \
+		ack
 
 .PHONY: install-base-apps-fedora
 install-base-apps-fedora: link-to-home
@@ -65,7 +66,8 @@ install-base-apps-fedora: link-to-home
 		xsel \
 		x11-utils \
 		network-manager-gnome \
-		build-essentials
+		build-essentials \
+		ack
 
 .PHONY: set-terminal-alternative
 set-terminal-alternative:
