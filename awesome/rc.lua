@@ -520,9 +520,24 @@ globalkeys = gears.table.join(
    end),
    -- screenshooter
    awful.key({ "Shift" }, "Menu", function () awful.spawn.spawn("xfce4-screenshooter") end),
+   -- file manager
    awful.key({ modkey }, "e", function () awful.spawn.spawn("nemo") end),
+   -- turn screen off
    awful.key({ "Control", "Mod1" }, "s", function () awful.spawn.spawn("bash -c 'sleep 0.5s && xset dpms force off'") end),
+   -- lock
+   awful.key({ "Control", "Mod1" }, "l", function () awful.spawn.spawn(lock_prg) end),
+   -- detect screen
+   awful.key({ "Control", modkey }, "d", function () awful.spawn.spawn("/home/ipetrov/.config/awesome/detect-screens.sh") end),
+   -- mouse driver reset
+   awful.key({ "Control", modkey }, "m", function () awful.spawn.spawn("/home/ipetrov/.config/awesome/reset-mouse.sh") end),
+   -- start bluetooth
    awful.key({ modkey }, "b", function () awful.spawn.spawn("blueman-manager") end),
+   -- mute sound
+   awful.key({ modkey, "Shift" }, "m", function () awful.spawn.spawn(string.format("pactl set-sink-mute %d toggle", myvolume.device)) end),
+   -- increase sound
+   awful.key({ modkey, "Shift" }, "u", function () awful.spawn.spawn(string.format("pactl set-sink-volume %d +5%%", myvolume.device)) end),
+   -- decrease sound
+   awful.key({ modkey, "Shift" }, "d", function () awful.spawn.spawn(string.format("pactl set-sink-volume %d -5%%", myvolume.device)) end),
 
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
