@@ -1,5 +1,9 @@
 .DEFAULT_GOAL := install
 
+.PHONY: install
+install: init-submodules install-base-apps-debian
+	@chsh -s /bin/zsh $(whomai)
+
 .PHONY: init-submodules
 init-submodules:
 	@git submodule update --init --recursive
@@ -17,7 +21,7 @@ link-to-home: init-submodules
 	@ln -s $(CURDIR)/ycm_extra_conf.py ~/.ycm_extra_conf.py
 	@ln -s $(CURDIR)/awesome ~/.config/
 	@mkdir $(HOME)/.config/urxvt/
-	@ln -s $(CURDIR)/urxvt-perls/clipboard $HOME/.config/urxvt/
+	@ln -s $(CURDIR)/urxvt-perls/clipboard $(HOME)/.config/urxvt/
 
 .PHONY: install-base-apps-debian
 install-base-apps-debian: link-to-home
@@ -41,8 +45,12 @@ install-base-apps-debian: link-to-home
 		xsel \
 		x11-utils \
 		network-manager-gnome \
-		build-essentials \
-		ack
+		build-essential \
+		ack \
+		nemo \
+		clitit \
+		xclip \
+		gnome-screensaver
 
 .PHONY: install-base-apps-fedora
 install-base-apps-fedora: link-to-home
@@ -67,7 +75,11 @@ install-base-apps-fedora: link-to-home
 		x11-utils \
 		network-manager-gnome \
 		build-essentials \
-		ack
+		ack \
+		nemo \
+		clitit \
+		xclip \
+		gnome-screensaver
 
 .PHONY: set-terminal-alternative
 set-terminal-alternative:
