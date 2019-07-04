@@ -5,15 +5,20 @@
   cm = commit --amend
   co = checkout
   dc = diff --cached
+  dnw = diff --word-diff-regex=[^[:space:]]
   dt = difftool -g
   fa = fetch --all
   ff = merge --ff-only @{u}
+  fp = push --force-with-lease
   last = log -n 5 --pretty='format:%h %an <%aE> %aI %s'
   lb = log --graph --simplify-by-decoration --pretty=format:'%d' --all
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
   nb = checkout -b
   noff = merge --no-ff
+  po = push origin
   pom = push origin master
+  pt = push origin --tags
   pullff = pull --ff-only
   pullsm = submodule update --recursive --remote
   rb = rebase
@@ -34,7 +39,7 @@
   whitespace = -indent-with-non-tab, trailing-space, -cr-at-eol, space-before-tab
 
 [credential]
-  helper = /usr/local/bin/git-credential-gnome-keyring
+  helper = libsecret
 
 [diff]
   algorithm = patience
@@ -57,11 +62,17 @@
 
   prompt = false
 
+[push]
+  default = current
+
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
 
 [user]
 	email = ivajloip@gmail.com
