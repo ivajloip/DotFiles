@@ -82,3 +82,7 @@ bindkey "\e[B" history-beginning-search-forward
 
 hash -d acklio="$GOPATH/src/gitlab.com/acklio"
 hash -d acklio-bitbucket="$GOPATH/src/bitbucket.org/acklio"
+
+alias myip="curl http://ipecho.net/plain && echo"
+alias docker-remove-dangling-images="docker images -qf dangling=true | xargs docker rmi"
+alias docker-remove-dangling-volumes="docker volume ls -qf dangling=true | xargs docker volume rm"
