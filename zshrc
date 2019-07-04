@@ -80,5 +80,5 @@ key[PageDown]=${terminfo[knp]}
 bindkey "\e[A" history-beginning-search-backward
 bindkey "\e[B" history-beginning-search-forward
 
-hash -d brocaar="$GOPATH/src/github.com/brocaar"
-hash -d acklio="$GOPATH/src/bitbucket.org/acklio"
+hash -d acklio="$GOPATH/src/gitlab.com/acklio"
+hash -d acklio-bitbucket="$GOPATH/src/bitbucket.org/acklio"
