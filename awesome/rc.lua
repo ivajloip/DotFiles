@@ -140,8 +140,8 @@ else
     })
 end
 
-
-mylauncher = awful.widget.launcher({ image = awful.util.getdir("config") .. "/themes/default/ubuntu.png",
+config_dir = awful.util.getdir("config")
+mylauncher = awful.widget.launcher({ image = config_dir .. "/themes/default/ubuntu.png",
                                      menu = mymainmenu })
 
 -- Menubar configuration
@@ -518,6 +518,12 @@ globalkeys = gears.table.join(
    awful.key({}, "XF86AudioPrev", function()
        awful.spawn.spawn("playerctl previous", false)
    end),
+   awful.key({}, "XF86MonBrightnessUp", function()
+       awful.spawn.spawn(config_dir.."/brightness.sh +5")
+   end),
+   awful.key({}, "XF86MonBrightnessDown", function()
+       awful.spawn.spawn(config_dir.."/brightness.sh -5")
+   end),
    -- screenshooter
    awful.key({ "Shift" }, "Menu", function () awful.spawn.spawn("xfce4-screenshooter") end),
    -- file manager
@@ -527,9 +533,9 @@ globalkeys = gears.table.join(
    -- lock
    awful.key({ "Control", "Mod1" }, "l", function () awful.spawn.spawn(lock_prg) end),
    -- detect screen
-   awful.key({ "Control", modkey }, "d", function () awful.spawn.spawn("/home/ipetrov/.config/awesome/detect-screens.sh") end),
+   awful.key({ "Control", modkey }, "d", function () awful.spawn.spawn(config_dir.."/detect-screens.sh") end),
    -- mouse driver reset
-   awful.key({ "Control", modkey }, "m", function () awful.spawn.spawn("/home/ipetrov/.config/awesome/reset-mouse.sh") end),
+   awful.key({ "Control", modkey }, "m", function () awful.spawn.spawn(config_dir.."/reset-mouse.sh") end),
    -- start bluetooth
    awful.key({ modkey }, "b", function () awful.spawn.spawn("blueman-manager") end),
    -- mute sound
