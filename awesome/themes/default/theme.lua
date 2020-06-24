@@ -12,13 +12,13 @@ local themes_path = gfs.get_themes_dir()
 local theme = {}
 
 theme.font          = "sans 12"
-theme.panel         = "panel.png"
+theme.panel         = "/home/ipetrov/.config/awesome/themes/default/panel.png"
 theme.panel_size    = 32
 
-theme.bg_normal     = "#343434"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
+theme.bg_normal     = "#343434AA"
+theme.bg_focus      = "#535d6cAA"
+theme.bg_urgent     = "#ff0000AA"
+theme.bg_minimize   = "#444444AA"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#aaaaaa"
@@ -75,8 +75,8 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
-theme.menu_height = dpi(15)
-theme.menu_width  = dpi(100)
+theme.menu_height = dpi(25)
+theme.menu_width  = dpi(250)
 
 -- You can add as many variables as
 -- you wish and access them by using

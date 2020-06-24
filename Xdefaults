@@ -31,8 +31,10 @@ urxvt*scrollBar: false
 
 !! urxvt font configuration:
 urxvt*boldColors: on
-urxvt*font:       xft:liberation mono:pixelsize=13:antialias=true:hinting=true:medium
-urxvt*boldFont:   xft:liberation mono:pixelsize=13:antialias=true:hinting=true:bold
+!urxvt*font:       xft:liberation mono:pixelsize=16:antialias=true:hinting=true:medium
+!urxvt*boldFont:   xft:liberation mono:pixelsize=16:antialias=true:hinting=true:bold
+urxvt*font:       xft:jetbrains mono:pixelsize=16:antialias=true:hinting=true:normal
+urxvt*boldFont:   xft:jetbrains mono:pixelsize=16:antialias=true:hinting=true:bold
 
 
 !! Copy and paste configuration
@@ -42,3 +44,4 @@ urxvt.clipboard.copycmd:  xclip -i -selection clipboard
 urxvt.clipboard.pastecmd: xclip -o -selection clipboard
 urxvt.keysym.Mod1-c: perl:clipboard:copy
 urxvt.keysym.Mod1-v: perl:clipboard:paste
+urxvt.print-pipe: cat > /dev/null

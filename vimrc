@@ -53,8 +53,10 @@ Bundle 'AndrewRadev/switch.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Bundle 'vim-airline/vim-airline-themes'
 Plugin 'fatih/vim-go'
-Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'rust-lang/rust.vim'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'vimwiki/vimwiki'
+Plugin 'mdempsky/gocode', {'rtp': 'vim/'}
 
 Bundle 'pangloss/vim-javascript'
 
@@ -66,6 +68,10 @@ colorscheme solarized
 
 " map escape to kj
 inoremap kj <Esc>
+
+" make j and k always move to next visual line (useful for wrapped lines).
+nnoremap j gj
+nnoremap k gk
 
 " Open NERDTree with the current directory
 map <leader>nt :NERDTree<CR>
@@ -94,8 +100,11 @@ au FileType go nmap <leader>b <Plug>(go-build)
 " Test the current go file
 au FileType go nmap <leader>t <Plug>(go-test)
 
+" Run the nearest test function
+au FileType go map <leader>mtl :TestNearest<enter>
+
 " Run coverage on the current go file
-au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>co :GoCoverageToggle -short<enter>
 
 " Open the relevant Godoc for the word under the cursor
 au FileType go nmap <Leader>gd <Plug>(go-doc)
@@ -110,7 +119,7 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>i <Plug>(go-info)
 
 " Rename a variable in the current go file
-au FileType go nmap <Leader>e <Plug>(go-rename)
+au FileType go nmap <Leader>mv <Plug>(go-rename)
 
 " Go to definition in a split
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
@@ -134,9 +143,6 @@ if v:version >= 703
   set colorcolumn=80
 endif
 
-" Start scrolling five lines before the horizontal window border
-set scrolloff=5
-
 set dir=/tmp/
 set pastetoggle=<F3>
 
@@ -147,6 +153,9 @@ set imsearch=-1
 
 autocmd BufWritePre *.{tex,rb,py,c,cpp,h,hpp,clj,go} :%s/\s\+$//e
 
+" Start scrolling five lines before the horizontal window border
+set scrolloff=5
+
 " vimux parameters
 
 let g:VimuxUseNearestPane = 1
@@ -156,7 +165,6 @@ let g:VimuxOrientation = "h"
 nnoremap <leader>vp :VimuxPromptCommand<CR>
 nnoremap <leader>vl :VimuxRunLastCommand<CR>
 nnoremap <leader>vq :VimuxCloseRunner<CR>
-
 
 " Enable this option if you want the cursor to jump to the first detected
 " error
@@ -206,9 +214,6 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 
-" Nerd tree
-let g:NERDTreeQuitOnOpen = 1
-
 " Markdown preveiw
 let vim_markdown_preview_hotkey='<leader>mp'
 let vim_markdown_preview_github=1
@@ -217,6 +222,8 @@ let vim_markdown_preview_use_xdg_open=1
 " format with goimports instead of gofmt
 let g:go_fmt_command = "goimports"
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:go_updatetime = 400
+let g:go_auto_sameids = 1
 
 " rust autoformat
 let g:rustfmt_autosave = 1
@@ -226,11 +233,22 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 
 " Ignore some files
-set wildignore+=*/.git/*,*.class,*.jar,*.zip,*.d
+set wildignore+=*/.git/*,*.class,*.jar,*.zip,*.d,*/node_modules,*/coverage,*/build,*/target
 
 nnoremap <leader>q :call ToggleQuickfix()<cr>
 nnoremap <leader>Q :cc<cr>
 nnoremap <leader>j :cnext<cr>
 nnoremap <leader>k :cprev<cr>
+
+" vimdiff as merge tool
+
+nnoremap <leader>dgr :diffg RE<cr>
+nnoremap <leader>dgl :diffg LO<cr>
+nnoremap <leader>dgb :diffg BA<cr>
+
+" spell
+set spelllang=en_us
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=en_us
 
 " end of file

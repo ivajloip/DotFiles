@@ -538,6 +538,10 @@ globalkeys = gears.table.join(
    awful.key({ modkey, "Shift" }, "u", function () awful.spawn.spawn(string.format("pactl set-sink-volume %d +5%%", myvolume.device)) end),
    -- decrease sound
    awful.key({ modkey, "Shift" }, "d", function () awful.spawn.spawn(string.format("pactl set-sink-volume %d -5%%", myvolume.device)) end),
+   -- DND
+   awful.key({ modkey, "Control" }, "s", function () naughty.suspend() end),
+   -- Disable DNS
+   awful.key({ modkey, "Mod1" }, "s", function () naughty.resume() end),
 
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
@@ -809,9 +813,25 @@ end
 start_gnome_keyring()
 
 awful.spawn.spawn("/usr/libexec/polkit-gnome-authentication-agent-1")
-awful.spawn.spawn("nm-applet")
 awful.spawn.spawn("gnome-screensaver")
 run_once("redshift")
 run_once("clipit")
+run_once("gajim")
+--awful.spawn.spawn("nm-applet")
+--run_once("/home/ipetrov/.config/awesome/detect-screens.sh")
+
+--add callback for the notifications
+--function naughty.config.notify_callback(args)
+  --local c = client.focus
+  --if c then
+	--if c.fullscreen and args.timeout ~= 0 then
+		--naughty.suspend()
+		--return
+	--else
+		--naughty.resume()
+		--return args
+	--end
+  --end
+--end
 
 -- }}}
