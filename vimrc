@@ -55,6 +55,8 @@ Bundle 'vim-airline/vim-airline-themes'
 Plugin 'fatih/vim-go'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'rust-lang/rust.vim'
+Plugin 'vimwiki/vimwiki'
+Plugin 'racer-rust/vim-racer'
 
 Bundle 'pangloss/vim-javascript'
 
@@ -210,16 +212,17 @@ let g:rbpt_colorpairs = [
 let g:NERDTreeQuitOnOpen = 1
 
 " Markdown preveiw
-let vim_markdown_preview_hotkey='<leader>mp'
-let vim_markdown_preview_github=1
-let vim_markdown_preview_use_xdg_open=1
+let g:vim_markdown_preview_hotkey='<leader>mp'
+let g:vim_markdown_preview_github=0
+let g:vim_markdown_preview_pandoc=1
+let g:vim_markdown_preview_use_xdg_open=1
 
 " format with goimports instead of gofmt
 let g:go_fmt_command = "goimports"
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
 " rust autoformat
-let g:rustfmt_autosave = 1
+let g:rustfmt_autosave = 0
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1

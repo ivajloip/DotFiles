@@ -31,8 +31,8 @@ urxvt*scrollBar: false
 
 !! urxvt font configuration:
 urxvt*boldColors: on
-urxvt*font:       xft:liberation mono:pixelsize=13:antialias=true:hinting=true:medium
-urxvt*boldFont:   xft:liberation mono:pixelsize=13:antialias=true:hinting=true:bold
+urxvt*font:       xft:liberation mono:pixelsize=15:antialias=true:hinting=true:medium
+urxvt*boldFont:   xft:liberation mono:pixelsize=15:antialias=true:hinting=true:bold
 
 
 !! Copy and paste configuration

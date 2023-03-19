@@ -35,9 +35,6 @@ if ( command -v vimx > /dev/null 2>&1 ); then
   alias vim="vimx"
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # Other variables customizations
 export EDITOR=vim
 export PAGER=less
@@ -46,7 +43,7 @@ export GOROOT=$HOME/workspace/programs/go
 export GOBIN=$GOPATH/bin
 
 # Path customizations
-PATH="$GOBIN:$HOME//.rvm/bin:$HOME//workspace/bin:$JAVA_HOME/bin:$PATH" # Add RVM to PATH for scripting
+PATH="$PATH:$GOBIN:$HOME/workspace/bin"
 
 # useful vim key bindings
 bindkey -M viins 'kj' vi-cmd-mode
@@ -81,4 +78,8 @@ bindkey "\e[A" history-beginning-search-backward
 bindkey "\e[B" history-beginning-search-forward
 
 hash -d brocaar="$GOPATH/src/github.com/brocaar"
-hash -d acklio="$GOPATH/src/bitbucket.org/acklio"
+hash -d acklio="$GOPATH/src/gitlab.com/acklio"
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias myip="curl http://ipecho.net/plain && echo"
+alias docker-remove-dangling-images="docker images -qf dangling=true | xargs docker rmi"
+alias docker-remove-dangling-volumes="docker volume ls -qf dangling=true | xargs docker volume rm"
