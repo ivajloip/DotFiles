@@ -35,18 +35,12 @@ if ( command -v vimx > /dev/null 2>&1 ); then
   alias vim="vimx"
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # Other variables customizations
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
 export GOPATH=$HOME/workspace/go
 export GOROOT=$HOME/workspace/programs/go
 export GOBIN=$GOPATH/bin
-
-# Path customizations
-PATH="$GOBIN:$HOME//.rvm/bin:$HOME//workspace/bin:$JAVA_HOME/bin:$PATH" # Add RVM to PATH for scripting
 
 # useful vim key bindings
 bindkey -M viins 'kj' vi-cmd-mode
@@ -80,9 +74,8 @@ key[PageDown]=${terminfo[knp]}
 bindkey "\e[A" history-beginning-search-backward
 bindkey "\e[B" history-beginning-search-forward
 
-hash -d acklio="$GOPATH/src/gitlab.com/acklio"
-hash -d acklio-bitbucket="$GOPATH/src/bitbucket.org/acklio"
-
 alias myip="curl http://ipecho.net/plain && echo"
 alias docker-remove-dangling-images="docker images -qf dangling=true | xargs docker rmi"
 alias docker-remove-dangling-volumes="docker volume ls -qf dangling=true | xargs docker volume rm"
+
+. "$HOME/.cargo/env"
