@@ -73,7 +73,6 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 --------------
 vim.cmd([[
   set wildignore+=*/.git/*,*.class,*.jar,*.zip,*.d
-  colorscheme solarized
 
   let g:airline_theme             = 'luna'
   let g:airline#extensions#syntastic#enabled = 1
