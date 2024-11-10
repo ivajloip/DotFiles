@@ -34,7 +34,7 @@
   ui = auto
 
 [core]
-  editor = /usr/bin/env vim
+  editor = nvim
   logallrefupdates = true
   whitespace = -indent-with-non-tab, trailing-space, -cr-at-eol, space-before-tab
 
@@ -64,15 +64,6 @@
 
 [push]
   default = current
-
-[url "git@bitbucket.org:"]
-	insteadOf = https://bitbucket.org/
-
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-
-[url "git@gitlab.com:"]
-	insteadOf = https://gitlab.com/
 
 [user]
 	email = ivajloip@gmail.com

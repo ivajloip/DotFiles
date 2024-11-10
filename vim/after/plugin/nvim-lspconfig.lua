@@ -122,3 +122,14 @@ lspconfig.rust_analyzer.setup {
     "rustup", "run", "stable", "rust-analyzer"
   }
 }
+lspconfig.gopls.setup({
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+    },
+  },
+})
